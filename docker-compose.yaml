@@ -1,0 +1,17 @@
+services:
+  watingroom:
+    build:
+      context: .
+      dockerfile: ./docker/app/Dockerfile
+    command: bin/dev
+    volumes:
+      - ./src:/app
+    ports:
+      - "3000:3000"
+    environment:
+      - BINDING=0.0.0.0
+      - ORIGIN_HOST=origin
+    stdin_open: true
+    tty: true
+  origin:
+    image: nginx

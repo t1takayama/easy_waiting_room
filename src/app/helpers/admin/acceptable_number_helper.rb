@@ -1,0 +1,2 @@
+module Admin::AcceptableNumberHelper
+end

@@ -1,0 +1,6 @@
+<turbo-frame id="acceptable_number">
+  <%= form_with url: admin_acceptable_number_path do |f| %>
+    <%= f.select :acceptable_number, [0, 10, 100, 500, 1000] %>
+    <%= f.submit %>
+  <% end %>
+</turbo_frame>

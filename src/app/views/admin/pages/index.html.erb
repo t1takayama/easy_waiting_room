@@ -1,0 +1,16 @@
+<div>
+  <div>
+    <span>受付人数:</span>
+    <%= turbo_frame_tag "queue_number" do %>
+      <%= @queue_number.nil? ? "0" : @queue_number %>
+      <%= link_to "更新", admin_path %>
+    <% end %>
+  </div>
+  <div>
+    <span>入場可能数:</span>
+    <%= turbo_frame_tag "acceptable_number" do %>
+      <%= @acceptable_number.nil? ? "未設定" : @acceptable_number %>
+      <%= link_to "変更", admin_edit_acceptable_number_path %>
+    <% end %>
+  </div>
+</div>
